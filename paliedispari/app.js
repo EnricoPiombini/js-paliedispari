@@ -5,19 +5,22 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto. Se l’utente aveva scelto pari e la somma è pari, ha vinto l’utente, altrimenti il computer
 
-const sceltaPariDispari = prompt('Inserisci pari o dispari');
-console.log(sceltaPariDispari);
+// // L’utente sceglie pari o dispari tramite un prompt
+// const sceltaPariDispari = prompt('Inserisci pari o dispari');
+// console.log(sceltaPariDispari);
 
+//L'utente inserisce un numero da 1 a 5
+const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log(userNumber);
 
-// Generiamo un numero random per il pc da 1 a 5
-function numberCpu(min, max) {
-    const randomCpu = Math.floor(Math.random()*(max- min + 1)) + min;
-   return randomCpu;
+// Generiamo un numero random da 1 a 5 tramite una funzione
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + 1) + min;
+}
 
-};
-console.log(numberCpu(1,5))
+let randomCpu = randomNumber(1, 5);
+console.log(randomCpu);
 
-
-
-
-
+// Sommiamo il numero inserito dall'utente e quello generato casualmente dal computer
+let sumUserCpu = randomCpu + userNumber;
+console.log(sumUserCpu);
