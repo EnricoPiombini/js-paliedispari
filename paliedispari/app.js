@@ -5,9 +5,6 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto. Se l’utente aveva scelto pari e la somma è pari, ha vinto l’utente, altrimenti il computer
 
-// // L’utente sceglie pari o dispari tramite un prompt
-// const sceltaPariDispari = prompt('Inserisci pari o dispari');
-// console.log(sceltaPariDispari);
 
 //L'utente inserisce un numero da 1 a 5
 const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
@@ -22,12 +19,27 @@ let randomCpu = randomNumber(1, 5);
 console.log(randomCpu);
 
 // Sommiamo il numero inserito dall'utente e quello generato casualmente dal computer
-let sumUserCpu = randomCpu + userNumber;
+let sumUserCpu = parseInt(randomCpu) + userNumber;
 console.log(sumUserCpu);
 
 // Stabiliamo se la somma dei numeri è pari o dispari con una funzione
 function even(number) {
     const result = number % 2 === 0;
     return result;
-    }
+}
 console.log(even(sumUserCpu));
+
+// // L’utente sceglie pari o dispari tramite un prompt
+const sceltaPariDispari = prompt('Inserisci pari o dispari');
+console.log(sceltaPariDispari);
+
+// Creo un array vuoto in cui inserirò il valore derivante dal prompt
+const pariDispari = [];
+pariDispari.push(sceltaPariDispari);
+
+// Stabilisco le condizoni
+if (sceltaPariDispari.includes ("pari") && even(sumUserCpu)){
+console.log("Ha vinto l'utente");
+}else {
+    console.log("Ha vinto Cpu")
+}
