@@ -24,3 +24,10 @@ console.log(randomCpu);
 // Sommiamo il numero inserito dall'utente e quello generato casualmente dal computer
 let sumUserCpu = randomCpu + userNumber;
 console.log(sumUserCpu);
+
+// Stabiliamo se la somma dei numeri è pari o dispari con una funzione
+function even(number) {
+    const result = number % 2 === 0;
+    return result;
+    }
+console.log(even(sumUserCpu));
