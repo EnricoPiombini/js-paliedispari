@@ -38,8 +38,9 @@ const pariDispari = [];
 pariDispari.push(sceltaPariDispari);
 
 // Stabilisco le condizoni
-if (sceltaPariDispari.includes ("pari") && even(sumUserCpu)){
-console.log("Ha vinto l'utente");
+const sumEvenOdd= (even(sumUserCpu));
+if (sceltaPariDispari.includes ("pari") && sumEvenOdd){
+alert("Ha vinto l'utente");
 }else {
-    console.log("Ha vinto Cpu")
+    alert("Ha vinto la Cpu")
 }
